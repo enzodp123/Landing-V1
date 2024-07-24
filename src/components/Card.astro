@@ -1,0 +1,14 @@
+---
+import type { ImgAttributes } from 'astro:assets';
+
+interface Props {
+    name : string;
+    img : ImgAttributes;
+    parrafo : string;
+}
+
+let {name} = Astro.props;
+let {img} = Astro.props;
+let {parrafo} = Astro.props;
+
+---
