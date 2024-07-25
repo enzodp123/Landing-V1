@@ -11,5 +11,19 @@
 </header>
 
 <style>
-
+    header{
+        transition: backdrop-filter 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) ease-in-out;
+        transition: background .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .hdr{
+        backdrop-filter:blur(3px);
+        background:#00000069 ;
+    }
 </style>
+<script>
+    const header = document.querySelector("header");
+//TRANSICION DE CLASS
+    window.addEventListener("scroll",()=>{
+        header!.classList.toggle("hdr", window.scrollY > 3);
+    })
+    </script>
