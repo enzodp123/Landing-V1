@@ -1,10 +1,25 @@
 ---
+import Nav from "./Nav.astro";
+
 
 ---
 
 <header class="fixed w-full  z-20 p-4 place-content-center flex">
         <div class="flex items-center w-10/12 justify-between">
-        <img class="w-5" src="../../public/menu.svg" alt="">
+        
+        <div class="flex flex-col ">
+            <img style="cursor: pointer;" id="open" class="w-5" src="../../public/menu.svg" alt="">
+                <div id="menu"  style="backdrop-filter: blur(10px);
+    " class=" hidden items-center place-content-center w-auto h-auto p-3 absolute top-16 bg-[rgba(0,0,0,0.23)] rounded-md">
+                    <nav>
+                        <ul class="flex place-content-center flex-col items-start">
+                            <li class="p-[2px]"><a class="text-lg text-slate-100 font-medium" href="#">Inicio</a></li>
+                            <li class="p-[2px]"><a class="text-lg text-slate-100 font-medium" href="#">Motos</a></li>
+                            <li class="p-[2px]"><a class="text-lg text-slate-100 font-medium" href="#">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+        </div>
         <h1 class=" text-lime-500 text-2xl font-extrabold relative select-none rounded-md px-6">Kw</h1>
         <img class="w-6 relative" src="../../public/user.svg" alt="user">
     </div>
@@ -19,11 +34,22 @@
         backdrop-filter:blur(3px);
         background:#00000069 ;
     }
+    .visible{
+        display: flex;
+    }
 </style>
 <script>
     const header = document.querySelector("header");
 //TRANSICION DE CLASS
     window.addEventListener("scroll",()=>{
         header!.classList.toggle("hdr", window.scrollY > 3);
+    });
+
+    const click = document.getElementById("open");
+    const menu = document.getElementById("menu");
+
+    click?.addEventListener("click", ()=>{
+        menu?.classList.toggle("visible");
     })
+    
     </script>
