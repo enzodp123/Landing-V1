@@ -4,13 +4,12 @@ import Nav from "./Nav.astro";
 
 ---
 
-<header class="fixed w-full  z-20 p-4 place-content-center flex">
-        <div class="flex items-center w-10/12 justify-between">
-        
+<header class="fixed w-full z-20 p-4 place-content-center flex">
+        <div class="flex items-center place-content-center w-10/12 justify-between">
         <div class="flex flex-col ">
-            <img style="cursor: pointer;" id="open" class="w-5" src="../../public/menu.svg" alt="">
+            <img style="cursor: pointer;" id="open" class="w-[30px]" src="../../public/icons/menu.svg" alt="menu">
                 <div id="menu"  style="backdrop-filter: blur(10px);
-    " class=" hidden items-center place-content-center w-auto h-auto p-3 absolute top-16 bg-[rgba(0,0,0,0.23)] rounded-md">
+    " class=" hidden items-center place-content-center w-auto h-auto p-3 absolute top-[62px] bg-[#00000069]">
                     <nav>
                         <ul class="flex place-content-center flex-col items-start">
                             <li class="p-[2px]"><a class="text-lg text-slate-100 font-medium" href="#">Inicio</a></li>
@@ -20,10 +19,10 @@ import Nav from "./Nav.astro";
                     </nav>
                 </div>
         </div>
-        <h1 class=" text-lime-500 text-2xl font-extrabold relative select-none rounded-md px-6">Kw</h1>
-        <img class=" cursor-pointer w-6 relative" src="../../public/user.svg" id="open-2" alt="user">
-        <div id="log"  style="backdrop-filter: blur(10px);
-    " class="hidden items-center place-content-center w-auto h-auto p-3 absolute right-10 top-16 bg-[rgba(49,49,49,0.23)] rounded-md">
+        <img class="w-[35px] flex items-center place-content-center" src="../../public/icons/logo-kawa.svg" alt="logo">
+        <img class=" cursor-pointer w-6 relative" src="../../public/icons/user.svg" id="open-2" alt="user">
+        <div id="log"  style="backdrop-filter: blur(3px);
+    " class="hidden items-center place-content-center w-auto h-auto p-3 absolute right-10 top-[62px] bg-[#00000069]">
             <form class="flex flex-col py-3" action="login">
                 <input id="add2" class=" outline-none border-none  m-2 bg-[#ffffff44] text-black text-lg font-normal px-2 py-1" type="email" placeholder="example@gmail.com">
                 <input id="add" class="outline-none m-2 bg-[#ffffff44] text-black text-lg px-2 py-1" type="password" name="passwod" id="pw" placeholder="password">
@@ -52,26 +51,23 @@ import Nav from "./Nav.astro";
         background:#00000069 ;
     }
     .visible{
-        animation: animation-bar .2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        animation: animation-bar .5s steps(60) forwards;
         display: flex;
     }
     .visible2{
-        animation: animation-bar .2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        animation: animation-bar .5s steps(60) forwards;
         display: flex;
     }
 @keyframes animation-bar {
     0%{
-        display: flex;
-        top: 0;
-        opacity: 0.1;
-        transform: scaleY(0.1);
-        
+        top: 0rem;
+        opacity: 0.3;
+        height: 0px;
     }
     100%{
-        display: flex;
-        opacity: 1;
         width: auto;
-        height: auto;
+        top:3.9rem;
+        height: 200px;
     }
 }
 </style>
