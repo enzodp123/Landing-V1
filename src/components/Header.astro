@@ -1,5 +1,8 @@
 ---
-import Nav from "./Nav.astro";
+import menuIcons from '../assests/img/icons/menu.svg'
+import logoKawa from '../assests/img/icons/Logo-kawa.svg'
+import logoUser from '../assests/img/icons/user.svg'
+
 
 
 ---
@@ -7,7 +10,7 @@ import Nav from "./Nav.astro";
 <header class="fixed w-full z-20 p-4 place-content-center flex">
         <div class="flex items-center place-content-center w-10/12 justify-between">
         <div class="flex flex-col ">
-            <img style="cursor: pointer;" id="open" class="w-[30px]" src="../assests/img/icons/menu.svg" alt="menu">
+            <img style="cursor: pointer;" id="open" class="w-[30px]" src={menuIcons.src} alt="menu">
                 <div id="menu"  style="backdrop-filter: blur(10px);
     " class=" hidden items-center place-content-center w-auto h-auto p-3 absolute top-[62px] bg-[#00000069]">
                     <nav>
@@ -19,8 +22,8 @@ import Nav from "./Nav.astro";
                     </nav>
                 </div>
         </div>
-        <img class="w-[35px] flex items-center place-content-center" src="../assests/img/icons/logo-kawa.svg" alt="logo">
-        <img class=" cursor-pointer w-6 relative" src="../../public/icons/user.svg" id="open-2" alt="user">
+        <img class="w-[35px] flex items-center place-content-center" src={logoKawa.src} alt="logo">
+        <img class=" cursor-pointer w-6 relative" src={logoUser.src} id="open-2" alt="user">
         <div id="log"  style="backdrop-filter: blur(3px);
     " class="hidden items-center place-content-center w-auto h-auto p-3 absolute right-10 top-[62px] bg-[#00000069]">
             <form class="flex flex-col py-3" action="login">

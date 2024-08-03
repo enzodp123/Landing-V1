@@ -1,40 +1,68 @@
 ---
 import Card from "./Card.astro";
+import imgVersys from '../assests/img/motos/VERSYS-650.webp'
+import imgKx from '../assests/img/motos/KX-450-F.webp'
+import imgZ400 from '../assests/img/motos/Z-400.webp'
+import imgNinja from '../assests/img/motos/NINJA-ZX-14R.webp'
+
+import imgLogoVersys from '../assests/img/motos-logo/VERSYS-L.svg'
+import imgLogoKx from '../assests/img/motos-logo/KX-450-L.svg'
+import imgLogoZ400 from '../assests/img/motos-logo/Z-400-L.svg'
+import imgLogoNinja from '../assests/img/motos-logo/NINJA-ZX-14R-L-02.svg'
+
+
 
 
 ---
-<main>
-    <Card
-        logo="../assests/img/motos-logo/VERSYS-L.svg"
-        moto="../assests/img/motos/VERSYS-650.webp"
-        destacados1="CILINDRADA: 649 cm³"
-        destacados2="Potencia máxima: 49 kW {67 CV} / 8.500 rpm"
-        alt1="Versys-logo"
-        alt2="Versys"
-    />
-    <Card
-        logo="../assests/img/motos-logo/KX-450-L.svg"
-        moto="../assests/img/motos/KX-450-F.webp"
-        destacados1="CILINDRADA: 449 cm³"
-        destacados2="Motor de 4 tiempos"
-        alt1="Versys-logo"
-        alt2="Versys"
-    />
-    <Card
-        logo="../assests/img/motos-logo/Z-400-L.svg"
-        moto="../assests/img/motos/Z-400.wep"
-        destacados1="Cilindrada: 399 cm³"
-        destacados2="Potencia máxima: 33,4 kW {45 CV} / 10.000 rpm"
-        alt1="Versys-logo"
-        alt2="Versys"
-    />
-    <Card
-        logo="../assests/img/motos-logo/NINJA-ZX.svg"
-        moto="../assests/img/motos/NINJA-ZX-14R.webp"
-        destacados1="CUATRO CILINDROS EN LÍNEA DE 1.441 C. C."
-        destacados2="CON INYECCIÓN DIGITAL DE COMBUSTIBLE ELECTRÓNICA A BORDO PREMIUM"
-        alt1="Versys-logo"
-        alt2="Versys"
-    />
+<main class="flex items-center place-content-center w-[100%]">
+    <div class:list={['carrousel-1']} class="flex items-center place-content-center">
+        <div class:list={['carrousel-1']}>
+            <Card 
+                logo={imgLogoVersys.src}
+                moto={imgVersys.src}
+                destacados1="CILINDRADA: 649 cm³"
+                destacados2="Potencia máxima: 49 kW {67 CV} / 8.500 rpm"
+                alt1="Versys-logo"
+                alt2="Versys"
+            />
+        </div>
 
+        <div class:list={['carrousel-2']}>
+            <Card
+                logo={imgLogoKx.src}
+                moto={imgKx.src}
+                destacados1="CILINDRADA: 449 cm³"
+                destacados2="Motor de 4 tiempos"
+                alt1="Versys-logo"
+                alt2="Versys"
+            />
+        </div>
+
+        <div class:list={['carrousel-3']}>
+            <Card
+                logo={imgLogoZ400.src}
+                moto={imgZ400.src}
+                destacados1="Cilindrada: 399 cm³"
+                destacados2="Potencia máxima: 33,4 kW {45 CV} / 10.000 rpm"
+                alt1="Versys-logo"
+                alt2="Versys"
+            />
+        </div>
+        <div class:list={['carrousel-4']}>
+            <Card
+                logo={imgLogoNinja.src}
+                moto={imgNinja.src}
+                destacados1="CUATRO CILINDROS EN LÍNEA DE 1.441 C. C."
+                destacados2="CON INYECCIÓN DIGITAL DE COMBUSTIBLE ELECTRÓNICA A BORDO PREMIUM"
+                alt1="Versys-logo"
+                alt2="Versys"
+            />
+        </div>
+    </div>
 </main>
+
+<style>
+    card{
+        width: 300px;
+    }
+</style>
